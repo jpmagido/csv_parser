@@ -1,2 +1,16 @@
-<h1>Documents#index</h1>
-<p>Find me in app/views/documents/index.html.erb</p>
+<h2> Index de tous les documents </h2>
+
+<div>
+  <% @documents.each do |document| %>
+    <ul>
+      <li><%= document.name %></li>
+      <% if document.csv_file.attached? %>
+        <li>Nom du fichier: <%= document.csv_file.blob.filename %></li>
+      <% else %>
+        <li> Pas de document attaché</li>
+      <% end %>
+      <li><%= document.id %></li>
+      <li><%= link_to 'show', document_path(document) %></li>
+    </ul>
+  <% end %>
+</div>

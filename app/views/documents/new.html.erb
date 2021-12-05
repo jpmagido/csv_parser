@@ -1,2 +1,10 @@
-<h1>Documents#new</h1>
-<p>Find me in app/views/documents/new.html.erb</p>
+Créer un nouveau document avec un fichier lié
+
+<%= form_with model: @document do |form| %>
+  <ul>
+    <li> Name: <%= form.text_field :name %> </li>
+    <li> <%= form.file_field :csv_file %> </li>
+  </ul>
+  <br>
+  <%= form.submit %>
+<% end %>

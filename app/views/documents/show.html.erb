@@ -1,2 +1,9 @@
-<h1>Documents#show</h1>
-<p>Find me in app/views/documents/show.html.erb</p>
+<div> Bonjour, vous êtes sur le show</div>
+
+<div>
+  <ul>
+    <li>Name:  <%= @document.name %> </li>
+    <br>
+    <li>Fichier lié ? <%= @document.csv_file.attached? %> </li>
+  </ul>
+</div>

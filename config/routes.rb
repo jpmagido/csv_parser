@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  get 'documents/new'
-  get 'documents/index'
-  get 'documents/show'
+  resources :documents, only: [:show, :index, :new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

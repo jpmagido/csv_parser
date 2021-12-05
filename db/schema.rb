@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 2021_12_05_165538) do
 
   create_table "documents", force: :cascade do |t|
     t.string "name"
+    t.text "csv_headers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
